@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Canvas</title>
+</head>
+
+<body onload="init()">
+
+    <nav>
+        <div class="navbar">
+            <ul class="navigation">
+                <li class="header">memgen</li>
+                <li onclick="" lass="gallery">Gallery</li>
+                <li class="about">About</li>
+            </ul>
+        </div>
+    </nav>
+    <canvas-container-editor>
+        <div class="canvas1">
+            <canvas id="my-canvas" height="500" width="500"></canvas>
+            <div class="control-box">
+                <input class="textbox" type="text" onfocus="this.value=''" id="myText" placeholder="add text to your meme!">
+                <button onclick="setLineTxt()" class="button">+</button>
+                <button class="button">Delete</button>
+                <button class="button">A+</button>
+                <button class="button">A-</button>
+                <button class="button">Font</button>
+                <button class="button">Color</button>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <footer>
+                memegen <br>@Yonatan Shamaev
+            </footer>
+        </div>
+
+
+</body>
+<script src="js/meme-controller.js"></script>
+<script src="js/meme-service.js"></script>
+
+</html>
