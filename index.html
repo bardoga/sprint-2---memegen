@@ -13,19 +13,54 @@
     <nav>
         <div class="navbar">
             <ul class="navigation">
-                <li class="header">memgen</li>
-                <li class="gallery">Gallery</li>
+                <li class="header">memes</li>
+                <li onclick="OnscrollTop()" class="gallery">Gallery</li>
                 <li class="about">About</li>
             </ul>
         </div>
     </nav>
     <gallery class="gallery-container">
-        <!-- <img src="img/1.jpg" alt=""> -->
     </gallery>
+    <canvas-container-editor>
+        <div class="canvas1">
+            <h2>Make your meme here!</h2> <br>
+            <canvas id="my-canvas" height="600" width="600"></canvas>
+            <div class="control-box">
+                <input class="textbox" type="text" onfocus="this.value=''" id="myText" placeholder="Place text here!" autocomplete="off">
+                <button onclick="OnSetLineTxt()" class="button">+</button>
+                <button onclick="onDeleteText()" class="button">❌</button>
+                <button onclick="onChangeLine()" class="button">↓↑</button>
+                <button onclick="onMoveLineUD('up')" class="button">↑</button>
+                <button onclick="onMoveLineUD('down')" class="button">↓</button>
+                <button onclick="onIncFont()" class="button">A+</button>
+                <button onclick="onDecFont()" class="button">A-</button>
+                <select name="selectFontFamily " id="selectFontFamily " onchange="onUpdateFont(this.value) ">
+                    <option> Impact</option>
+                    <option> Aerial</option>
+                    <option> Sans-Serif</option>
+                    <option> Lucida</option>
+                    <option> Serif</option>
+                </select>
+                <div class="fillcolor">
+                    <label for="color">Fill Color</label> <input type="color" onchange="onChangeColor(this.value)">
+                </div>
+                <div class="more ">
+                    <!-- <button class="share button ">Share</button> -->
+                    <button class="download button ">Download</button>
+                    <!-- <button class="save button ">Save</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer ">
+            <footer>
+                memes <br>@Yonatan Shamaev
+            </footer>
+        </div>
 </body>
-<script src="js/main.js"></script>
-<script src="js/meme-service.js"></script>
-<script src="js/gallery-controller.js"></script>
-<script src="canvas.html"></script>
+<script src="js/gallery-controller.js "></script>
+<script src="js/gallery-service.js"></script>
+<script src="js/meme-controller.js"></script>
+<script src="js/meme-service.js "></script>
+<script src="js/utils.js"></script>
 
 </html>

@@ -1,45 +1,25 @@
 'use strict'
-// var gGal = []
-// var idx;
 
-
-
-function onImgSelect(x) {
-    console.log(x.src)
+function init() {
+    console.log('loading...')
+    renderGallery()
 }
 
 
+function renderGallery() {
+    let imgs = getImg()
+    let strHtmls = ''
+    imgs.forEach(img => {
+        strHtmls += `
+         <img onclick="onImgSelect('${img.url}',this)" class="galleryitem" src=${img.url}>
+         `
+    })
+    document.querySelector('.gallery-container').innerHTML = strHtmls;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-// function getGallery() {
-//     idx = 1;
-//     for (var i = 0; i < 3; i++) {
-//         gGal.push(`img/${idx}/jpg`)
-//         idx++
-
-//     }
-//     return gGal
-// }
-
-
-
-// function renderGallery() {
-//     var gals = getGallery()
-//     console.log(gals)
-//     var strHTML = gals.maps(gal => `
-//     <section class="cars-gallery">
-//     <img src="
-
-
-//     `)
-// }
+function OnscrollTop() {
+    window.scrollTo(0, 0)
+    var block = document.querySelector('.canvas1')
+    block.style.display = 'none'
+}
